@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ var a={
+    name:'Cherry',
+    // call apply 区别
+    //call 与 apply 都可以改变this的指向
+    // call 传参是一个一个给（thisBinder,a,b,c,...）参数地位与this的地位一样
+    // 而 apply 是一次性整体给，以数组的形式(thisBinder，[a,b,c,....])
+    fn:function(a,b){
+        console.log(this.name)
+        //以call(a,[1,2])为例
+        // a[1,2] b undefined
+        // a+b: [1,2] + undefined
+        // + 两边都是数字就是加法，如果不是，则变为链接运算符
+        // 此时会尝试将[1，2]转换为字符串为：1,2 （隐性类型转换）（tostring）
+        //undefined 是简单数据类型 没有tostring方法 所以用的String(undefined)强制将undefined转换为字符串类型
+        console.log(a+b)
+    }
+    }
+//a.fn(1,2)
+    var b=a.fn;// 普通函数
+    // 指定this
+    // 立即执行
+    // 参数
+    console.log(b.apply(a,[1,2]))
+    console.log(b.call(a,[1,2]))
+    console.log(b.call(a,1,2))
+    console.log(b.bind(a,1,2))
+</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 # 面向对象设计模式之代理模式 
-
+    面向对象开放中经常会碰到的，总结出来的23种设计模式之一。
 ## 面向对象 OOP 
 - 现代软件开始思想就是面向对象思想
     wan 、ly 、tn(代理对象)
@@ -13,5 +13,16 @@
     未来可以成为架构师的
 - tn是代理对象
     - 和ly有一样的方法 receiveFlower
-    
+        wan可以送给tn，去转送
+    - 接口 interface
+        面向对象编程成长为面向接口编程，设计我们的面向对象的软件世界。
+    - 代理模式通过实现相同的接口，对象互换，确实更好的
+        等ly心情好的时候再送。
 
+## js 语法
+- const 常量
+- === 恒等
+- js 数据类型
+    string number(不分integer，float) boolean 简单数据类型 
+    object(array, function,{} )  复杂数据类型
+- 定时器 setTimeout(function() {},2000)
